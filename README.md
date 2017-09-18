@@ -14,7 +14,7 @@ by Pereskokov Vladislav [seminars].
 <a name="algorithms"></a>
 ### Algorithms
   + Numerical
-    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/permutations)
+    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/permutations)
 
 <a name="run"></a>
 ### Run  
