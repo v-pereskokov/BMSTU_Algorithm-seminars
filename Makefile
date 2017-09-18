@@ -2,8 +2,7 @@
 
 all: test
 
-test:
-	go test ./...
+test: utils permutations
 
 utils:
 	go test ./src/utils/
