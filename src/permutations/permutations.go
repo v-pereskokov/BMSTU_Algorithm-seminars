@@ -8,10 +8,6 @@ import (
 func Permutations(number int) {
 	list := utils.Range(number)
 
-	for i := range list {
-		fmt.Printf("%d ", i)
-	}
-
 	for {
 		fmt.Printf("%v \n", list)
 		i := number - 2
@@ -26,7 +22,7 @@ func Permutations(number int) {
 
 		min := i + 1
 
-		for j := i + 2; ; j++ {
+		for j := i + 2; j < number; j++ {
 			if list[j] > list[i] && list[j] < list[min] {
 				min = j
 			}

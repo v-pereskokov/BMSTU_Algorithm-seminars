@@ -1,10 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"github.com/BMSTU_Algorithm-seminars/src/utils"
+	"github.com/BMSTU_Algorithm-seminars/src/permutations"
 )
 
 func main() {
-	fmt.Println(utils.Range(0))
+	permutations.Permutations(3)
 }
