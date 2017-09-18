@@ -15,10 +15,10 @@ by Pereskokov Vladislav [seminars].
 <a name="algorithms"></a>
 ### Algorithms
   + Collections
-    * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
+    * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
   + Algorithm
-    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/permutations)
-    * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
+    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/permutations)
+    * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
 
 <a name="run"></a>
 ### Run  
