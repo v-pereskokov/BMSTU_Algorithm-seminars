@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/BMSTU_Algorithm-seminars/src/permutations"
+	"github.com/vladpereskokov/BMSTU_Algorithm-seminars/src/permutations"
 )
 
 func main() {

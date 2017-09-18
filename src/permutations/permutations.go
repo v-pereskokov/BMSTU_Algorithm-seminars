@@ -2,7 +2,7 @@ package permutations
 
 import (
 	"fmt"
-	"github.com/BMSTU_Algorithm-seminars/src/utils"
+	"github.com/vladpereskokov/BMSTU_Algorithm-seminars/src/utils"
 )
 
 func Permutations(number int) <-chan string {
