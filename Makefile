@@ -1,9 +1,8 @@
-.PHONY: all test utils run
+.PHONY: all test utils permutations run
 
 all: test
 
-test:
-	go test ./...
+test: utils permutations
 
 utils:
 	go test ./src/utils/
