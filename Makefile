@@ -1,12 +1,12 @@
-.PHONY: all test stack run
+.PHONY: all test range run
 
 all: test
 
 test:
 	go test ./...
 
-stack:
-	go test ./src/stack/
+range:
+	go test ./src/utils/
 
 run:
 	go run ./src/main.go
