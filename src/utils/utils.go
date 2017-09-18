@@ -17,16 +17,16 @@ func Range(number int) []int {
 }
 
 func Reverse(numbers []int, begin int, end int) ([]int, error) {
+	if begin > end {
+		return numbers, errors.New("Begin more than end")
+	}
+
 	if begin == -1 {
 		begin = 0
 	}
 
-	if end != -1 {
+	if end == -1 {
 		end = len(numbers) - 1
-	}
-
-	if begin > end {
-		return numbers, errors.New("Begin more than end")
 	}
 
 	for i, j := begin, end; i < j; i, j = i+1, j-1 {

@@ -21,9 +21,12 @@ func TestRangeFail(t *testing.T) {
 }
 
 func TestReverse(t *testing.T) {
-	list := Reverse([]int{4, 2, 4, 0, 0, 1})
-	length := len(list)
+	list, err := Reverse([]int{4, 2, 4, 0, 0, 1}, -1, -1)
+	if err != nil {
+		t.Errorf("Error reverse: %v", err)
+	}
 
+	length := len(list)
 	testArray := []int{4, 2, 4, 0, 0, 1}
 
 	for i, value := range list {
@@ -34,7 +37,11 @@ func TestReverse(t *testing.T) {
 }
 
 func TestReverseEmpty(t *testing.T) {
-	list := Reverse([]int{})
+	list, err := Reverse([]int{}, -1, -1)
+	if err != nil {
+		t.Errorf("Error reverse: %v", err)
+	}
+
 	testArray := []int{}
 
 	if len(testArray) != len(list) {
