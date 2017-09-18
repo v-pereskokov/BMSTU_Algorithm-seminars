@@ -8,5 +8,5 @@ branches:
     - develop
     - master
 
-  script:
-    - make
+script:
+  - make
