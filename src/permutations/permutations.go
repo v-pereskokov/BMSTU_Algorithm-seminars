@@ -1,18 +1,20 @@
 package permutations
 
 import (
+	//"fmt"
+	"fmt"
 	"github.com/BMSTU_Algorithm-seminars/src/utils"
 )
 
-func Permutations(number int) <-chan []int {
-	c := make(chan []int)
+func Permutations(number int) <-chan string {
+	c := make(chan string)
 
 	go func() {
 		defer close(c)
 		list, _ := utils.Range(1, number+1)
 
 		for {
-			c <- list
+			c <- fmt.Sprintf("%v", list)
 
 			i := number - 2
 			for i >= 0 && list[i] >= list[i+1] {

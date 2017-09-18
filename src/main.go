@@ -7,6 +7,6 @@ import (
 
 func main() {
 	for v := range permutations.Permutations(3) {
-		fmt.Println(v)
+		fmt.Println(string(v))
 	}
 }
