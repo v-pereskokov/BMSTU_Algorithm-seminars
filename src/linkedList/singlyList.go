@@ -30,3 +30,17 @@ func Insert(list *SinglyList, value interface{}) {
 
 	list.Len++
 }
+
+func Has(list *SinglyList, value interface{}) bool {
+	for {
+		if list.Head == nil {
+			return false
+		}
+
+		if list.Head.Data == value {
+			return true
+		}
+
+		list.Head = list.Head.Next
+	}
+}

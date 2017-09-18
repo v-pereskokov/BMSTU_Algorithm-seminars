@@ -20,3 +20,27 @@ func TestSinglyListInsertAfter(t *testing.T) {
 		list.Head = list.Head.Next
 	}
 }
+
+func TestSinglyListHas(t *testing.T) {
+	list := New()
+
+	Insert(list, 3)
+	Insert(list, 5)
+	Insert(list, 6)
+
+	if Has(list, 3) != true {
+		t.Error("Don't match: not found")
+	}
+}
+
+func TestSinglyListNotHas(t *testing.T) {
+	list := New()
+
+	Insert(list, 3)
+	Insert(list, 5)
+	Insert(list, 6)
+
+	if Has(list, 0) == true {
+		t.Error("Don't match: not found")
+	}
+}
