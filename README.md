@@ -1,9 +1,10 @@
-## BMSTU Course of Algorithms
+## BMSTU Course of Algorithms  
+[![Build Status](https://travis-ci.org/vladpereskokov/BMSTU_Algorithm-seminars.svg?branch=develop)](https://travis-ci.org/vladpereskokov/BMSTU_Algorithm-seminars)  
 
 ### Table of contents
-  *[Description](#description)  
-  *[Algorithms](#algorithms)  
-  *[Run](#run)  
+  * [Description](#description)  
+  * [Algorithms](#algorithms)  
+  * [Run](#run)  
 
 <a name="description"></a>
 ### Description  
