@@ -8,19 +8,25 @@ type SinglyListItem struct {
 type SinglyList struct {
 	Len  int
 	Head *SinglyListItem
+	Tail *SinglyListItem
 }
 
 func New() *SinglyList {
-	list := &SinglyList{0, &SinglyListItem{0, nil}}
+	list := &SinglyList{}
 
 	return list
 }
 
-func InsertAfter(list *SinglyList, value interface{}) {
-	item := &SinglyListItem{value, list.Head.Next}
+func Insert(list *SinglyList, value interface{}) {
+	item := &SinglyListItem{value, nil}
 
-	item.Next = list.Head.Next
-	list.Head.Next = item
+	if list.Head == nil {
+		list.Head = item
+		list.Tail = item
+	} else {
+		list.Tail.Next = item
+		list.Tail = item
+	}
 
 	list.Len++
 }
