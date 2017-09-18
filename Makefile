@@ -1,10 +1,11 @@
-.PHONY: all test stackTest run
+.PHONY: all test stack run
 
 all: test
 
-test: stackTest
+test:
+	go test ./...
 
-stackTest:
+stack:
 	go test ./src/stack/
 
 run:
