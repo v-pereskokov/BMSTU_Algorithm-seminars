@@ -14,8 +14,11 @@ by Pereskokov Vladislav [seminars].
 
 <a name="algorithms"></a>
 ### Algorithms
-  + Numerical
+  + Collections
+    * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
+  + Algorithm
     * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/permutations)
+    * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
 
 <a name="run"></a>
 ### Run  
