@@ -45,4 +45,4 @@ by Pereskokov Vladislav [seminars].
 
 <a name="author" target="_blank"></a>
 ### Author
-[Vladislav Pereskokov](https://vladpereskokov.github.io/vladislav_pereskokov/)
+<a href="https://vladpereskokov.github.io/vladislav_pereskokov/" target="_blank">Vladislav Pereskokov</a>  
