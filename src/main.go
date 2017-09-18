@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"github.com/BMSTU_Algorithm-seminars/src/utils"
+)
+
 func main() {
-	println("Hello, world!")
+	fmt.Println(utils.ListRange(3))
 }
