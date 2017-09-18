@@ -15,10 +15,10 @@ by Pereskokov Vladislav [seminars].
 <a name="algorithms"></a>
 ### Algorithms
   + Collections
-    * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
+    * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
   + Algorithm
-    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/permutations)
-    * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/linkedList)
+    * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/permutations)
+    * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
 
 <a name="run"></a>
 ### Run  
@@ -40,12 +40,12 @@ by Pereskokov Vladislav [seminars].
     make utils
 ```
 
-#### Start main  
+#### Start linked list test
 
 ```bash
-    make run
+    make linkedList
 ```
 
 <a name="author" target="_blank"></a>
 ### Author
-<a href="https://vladpereskokov.github.io/vladislav_pereskokov/" target="_blank">Vladislav Pereskokov</a>  
+[Vladislav Pereskokov](https://vladpereskokov.github.io/vladislav_pereskokov/)
