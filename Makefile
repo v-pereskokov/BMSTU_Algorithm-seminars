@@ -1,11 +1,11 @@
-.PHONY: all test range run
+.PHONY: all test utils run
 
 all: test
 
 test:
 	go test ./...
 
-range:
+utils:
 	go test ./src/utils/
 
 run:
