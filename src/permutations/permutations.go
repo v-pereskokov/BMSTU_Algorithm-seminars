@@ -1,7 +1,6 @@
 package permutations
 
 import (
-	//"fmt"
 	"fmt"
 	"github.com/BMSTU_Algorithm-seminars/src/utils"
 )
