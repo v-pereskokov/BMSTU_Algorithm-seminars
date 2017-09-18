@@ -6,7 +6,7 @@ import (
 )
 
 func Permutations(number int) {
-	list := utils.Range(number)
+	list, _ := utils.Range(1, number+1)
 
 	for {
 		fmt.Printf("%v \n", list)

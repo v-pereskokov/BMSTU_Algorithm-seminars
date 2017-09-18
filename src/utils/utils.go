@@ -2,18 +2,23 @@ package utils
 
 import "errors"
 
-func Range(number int) []int {
-	if number < 1 {
-		return make([]int, 0)
+func Range(begin int, end int) ([]int, error) {
+	if begin > end {
+		return make([]int, 0), errors.New("Begin more than end")
 	}
 
-	list := make([]int, number)
-
-	for i := 0; i < number; i++ {
-		list[i] = i + 1
+	if end < 1 {
+		return make([]int, 0), errors.New("End less than 1")
 	}
 
-	return list
+	length := end - begin
+	list := make([]int, length)
+
+	for i := 0; i < length; i++ {
+		list[i] = begin + i
+	}
+
+	return list, nil
 }
 
 func Reverse(numbers []int, begin int, end int) ([]int, error) {
