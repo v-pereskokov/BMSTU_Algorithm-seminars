@@ -40,12 +40,6 @@ by Pereskokov Vladislav [seminars].
     make utils
 ```
 
-#### Start main  
-
-```bash
-    make run
-```
-
 <a name="author" target="_blank"></a>
 ### Author
-<a href="https://vladpereskokov.github.io/vladislav_pereskokov/" target="_blank">Vladislav Pereskokov</a>  
+[Vladislav Pereskokov](https://vladpereskokov.github.io/vladislav_pereskokov/)
