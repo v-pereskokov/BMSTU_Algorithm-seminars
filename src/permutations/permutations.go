@@ -13,6 +13,7 @@ func Permutations(number int) {
 	}
 
 	for {
+		fmt.Printf("%v \n", list)
 		i := number - 2
 
 		for i >= 0 && list[i] >= list[i+1] {
@@ -30,9 +31,9 @@ func Permutations(number int) {
 				min = j
 			}
 		}
-		
+
 		list[i], list[min] = list[min], list[i]
-		
-		
+
+		utils.Reverse(list, i+1, number-1)
 	}
 }
