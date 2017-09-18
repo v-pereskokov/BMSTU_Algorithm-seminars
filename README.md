@@ -40,6 +40,12 @@ by Pereskokov Vladislav [seminars].
     make utils
 ```
 
+#### Start linked list test
+
+```bash
+    make linkedList
+```
+
 <a name="author" target="_blank"></a>
 ### Author
 [Vladislav Pereskokov](https://vladpereskokov.github.io/vladislav_pereskokov/)
