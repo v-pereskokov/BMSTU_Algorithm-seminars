@@ -5,6 +5,7 @@
   * [Description](#description)  
   * [Algorithms](#algorithms)  
   * [Run](#run)  
+  * [Author](#author)  
 
 <a name="description"></a>
 ### Description  
@@ -42,5 +43,6 @@ by Pereskokov Vladislav [seminars].
     make run
 ```
 
+<a name="author" target="_blank"></a>
 ### Author
 [Vladislav Pereskokov](https://vladpereskokov.github.io/vladislav_pereskokov/)
