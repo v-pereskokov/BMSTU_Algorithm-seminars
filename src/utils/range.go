@@ -1,6 +1,6 @@
 package utils
 
-func ListRange(number int) []int {
+func Range(number int) []int {
 	list := make([]int, number)
 
 	for i := 0; i < number; i++ {

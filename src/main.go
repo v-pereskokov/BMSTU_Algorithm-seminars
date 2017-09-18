@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(utils.ListRange(3))
+	fmt.Println(utils.Range(3))
 }
