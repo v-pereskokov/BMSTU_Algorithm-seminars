@@ -40,3 +40,17 @@ func Reverse(numbers []int, begin int, end int) ([]int, error) {
 
 	return numbers, nil
 }
+
+func Factorial(number int) int {
+	if number <= 1 {
+		return 1
+	}
+
+	result := 1
+
+	for i := 2; i <= number; i++ {
+		result *= i
+	}
+
+	return result
+}

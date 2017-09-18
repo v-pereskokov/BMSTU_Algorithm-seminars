@@ -98,3 +98,19 @@ func TestReverseRangeError(t *testing.T) {
 		t.Error("Error reverse: begin > end")
 	}
 }
+
+func TestFactorial(t *testing.T) {
+	result := Factorial(5)
+
+	if result != 120 {
+		t.Error("Error count")
+	}
+}
+
+func TestFactorialError(t *testing.T) {
+	result := Factorial(-1)
+
+	if result != 1 {
+		t.Error("Error count")
+	}
+}
