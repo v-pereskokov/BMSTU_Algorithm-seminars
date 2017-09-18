@@ -48,3 +48,33 @@ func TestReverseEmpty(t *testing.T) {
 		t.Errorf("Don't empty: %v and %v\n", list, testArray)
 	}
 }
+
+func TestReverseRange(t *testing.T) {
+	begin := 2
+	end := 4
+
+	list, err := Reverse([]int{4, 2, 4, 0, 0, 1}, begin, end)
+	if err != nil {
+		t.Errorf("Error reverse: %v", err)
+	}
+
+	length := len(list)
+	testArray := []int{4, 2, 4, 0, 0, 1}
+
+	for i := begin; i < end; i++ {
+		t.Logf("%d and %d\n", testArray[length-i], list[i])
+		if testArray[length-i] != list[i] {
+			t.Errorf("Don't match: %d and %d\n", testArray[length-i], list[i])
+		}
+	}
+}
+
+func TestReverseRangeError(t *testing.T) {
+	begin := 4
+	end := 2
+
+	_, err := Reverse([]int{4, 2, 4, 0, 0, 1}, begin, end)
+	if err == nil {
+		t.Error("Error reverse: begin > end")
+	}
+}
