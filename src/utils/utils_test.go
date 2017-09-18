@@ -3,7 +3,10 @@ package utils
 import "testing"
 
 func TestRangeOk(t *testing.T) {
-	list := Range(4)
+	list, err := Range(1, 5)
+	if err != nil {
+		t.Errorf("Error ranged: %v \n", err)
+	}
 
 	for i := 0; i < 4; i++ {
 		if list[i] != i+1 {
@@ -12,11 +15,28 @@ func TestRangeOk(t *testing.T) {
 	}
 }
 
-func TestRangeFail(t *testing.T) {
-	list := Range(-1)
+func TestRangeFailRange(t *testing.T) {
+	_, err := Range(3, 1)
+	if err == nil {
+		t.Error("Error ranged \n")
+	}
+}
+
+func TestRangeFailEnd(t *testing.T) {
+	list, err := Range(-3, -1)
+	if err == nil {
+		t.Error("Error ranged end \n")
+	}
 
 	if len(list) > 0 {
-		t.Errorf("Error init: %d\n", len(list))
+		t.Error("Error length \n")
+	}
+}
+
+func TestRangeFailRangeBeginEnd(t *testing.T) {
+	list, err := Range(0, 0)
+	if err != nil || len(list) > 0 {
+		t.Error("Error ranged begin end \n")
 	}
 }
 

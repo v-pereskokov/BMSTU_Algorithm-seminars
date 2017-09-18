@@ -7,7 +7,7 @@ func Range(begin int, end int) ([]int, error) {
 		return make([]int, 0), errors.New("Begin more than end")
 	}
 
-	if end < 1 {
+	if begin < 0 || end < 0 {
 		return make([]int, 0), errors.New("End less than 1")
 	}
 
