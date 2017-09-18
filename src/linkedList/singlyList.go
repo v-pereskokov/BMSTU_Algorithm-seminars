@@ -44,3 +44,19 @@ func Has(list *SinglyList, value interface{}) bool {
 		list.Head = list.Head.Next
 	}
 }
+
+func IsLoopList(list *SinglyList) bool {
+	slow := list.Head
+	fast := list.Head
+
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+
+		if slow == fast {
+			return true
+		}
+	}
+
+	return false
+}
