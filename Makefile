@@ -1,14 +1,11 @@
-.PHONY: all test utils run
+.PHONY: all test utils permutations
 
 all: test
 
 test: utils permutations
 
 utils:
-	go test ./src/utils/
+	go test ./utils/
 
 permutations:
-	go test ./src/permutations/
-
-run:
-	go run ./src/main.go
+	go test ./permutations/
