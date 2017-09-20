@@ -19,3 +19,27 @@ func TestDoubleListInsert(t *testing.T) {
 		list.Head = list.Head.Next
 	}
 }
+
+func TestDoubleListHas(t *testing.T) {
+	list := NewDoubleList()
+
+	InsertDoubleListElement(list, 3)
+	InsertDoubleListElement(list, 5)
+	InsertDoubleListElement(list, 6)
+
+	if !HasDoubleListElement(list, 3) {
+		t.Error("Don't match: not found")
+	}
+}
+
+func TestDoubleListNotHas(t *testing.T) {
+	list := NewDoubleList()
+
+	InsertDoubleListElement(list, 3)
+	InsertDoubleListElement(list, 5)
+	InsertDoubleListElement(list, 6)
+
+	if HasDoubleListElement(list, 0) {
+		t.Error("Don't match: not found")
+	}
+}

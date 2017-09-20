@@ -58,16 +58,18 @@ func RemoveSingleListElement(list *SinglyList, value interface{}) {
 }
 
 func HasSingleListElement(list *SinglyList, value interface{}) bool {
+	current := list.Head
+
 	for {
-		if list.Head == nil {
+		if current == nil {
 			return false
 		}
 
-		if list.Head.Data == value {
+		if current.Data == value {
 			return true
 		}
 
-		list.Head = list.Head.Next
+		current = current.Next
 	}
 }
 

@@ -34,24 +34,23 @@ func InsertDoubleListElement(list *DoubleList, value interface{}) {
 }
 
 func HasDoubleListElement(list *DoubleList, value interface{}) bool {
-	if list.Head == nil {
-		return false
-	}
-	first := list.Head
+	current := list.Head
 
 	for {
-		if first.Data == value {
+		if current == nil {
+			return false
+		}
+
+		if current.Data == value {
 			return true
-		} else {
-			if first.Next != nil {
-				first = first.Next
-			} else {
-				return false
-			}
+		}
+
+		current = current.Next
+
+		if current == list.Tail && current.Data != value {
+			return false
 		}
 	}
-
-	return false
 }
 
 func RemoveDoubleListElement(list *DoubleList, value interface{}) {
