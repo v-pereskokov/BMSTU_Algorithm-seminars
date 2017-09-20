@@ -1,4 +1,4 @@
-.PHONY: all test utils permutations linkedList run
+.PHONY: all test utils permutations list run
 
 all: test
 
@@ -11,7 +11,7 @@ utils:
 permutations:
 	go test ./src/permutations/
 
-linkedList:
+list:
 	go test ./src/linkedList/
 
 run:

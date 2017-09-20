@@ -3,6 +3,7 @@ package linkedList
 type DoubleListItem struct {
 	Data interface{}
 	Next *DoubleListItem
+	Prev *DoubleListItem
 }
 
 type DoubleList struct {
@@ -18,7 +19,7 @@ func NewDoubleList() *DoubleList {
 }
 
 func InsertDoubleListElement(list *DoubleList, value interface{}) {
-	item := &DoubleListItem{value, nil}
+	item := &DoubleListItem{value, nil, list.Tail}
 
 	if list.Head == nil {
 		list.Head = item
