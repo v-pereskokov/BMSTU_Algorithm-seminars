@@ -1,5 +1,7 @@
 package linkedList
 
+import "fmt"
+
 type DoubleList struct {
 	Head *DoubleListItem
 	Tail *DoubleListItem
@@ -49,36 +51,6 @@ func HasDoubleListElement(list *DoubleList, value interface{}) bool {
 
 		if current == list.Tail && current.Data != value {
 			return false
-		}
-	}
-}
-
-func RemoveDoubleListElement(list *DoubleList, value interface{}) {
-	if list.Head == nil {
-		return
-	}
-
-	first := list.Head
-	Tail := list.Tail
-
-	for {
-		if Tail.Next == nil {
-			return
-		}
-
-		if first.Data == value {
-			first.Prev.Next = first.Next
-			first.Next.Prev = first.Prev
-
-			first.Prev = nil
-			first.Next = nil
-			first.Data = nil
-
-			list.Len--
-
-			return
-		} else {
-			first = first.Next
 		}
 	}
 }
