@@ -1,73 +1,86 @@
 package linkedList
 
-type DoubleListItem struct {
-	Data interface{}
-	Next *DoubleListItem
-	Prev *DoubleListItem
-}
-
-type DoubleList struct {
+type List struct {
+	Head *Item
+	Tail *Item
 	Len  int
-	Head *DoubleListItem
-	Tail *DoubleListItem
 }
 
-func NewDoubleList() *DoubleList {
-	list := &DoubleList{}
+type Item struct {
+	Data interface{}
+	Next *Item
+	Prev *Item
+}
+
+func NewDoubleList() *List {
+	list := &List{}
+	list.Len = 0
+	return list
+}
+
+func InsertDoubleListElement(list *List, value interface{}) *List {
+	newItem := &Item{value, list.Head, list.Tail}
+
+	if list.Head == nil {
+		list.Head = newItem
+		list.Tail = newItem
+	} else {
+		list.Head = newItem
+		list.Head.Prev = newItem
+		list.Tail.Next = newItem
+	}
+
+	list.Len++
 
 	return list
 }
 
-func InsertDoubleListElement(list *DoubleList, value interface{}) {
-	item := &DoubleListItem{value, nil, list.Tail}
-
+func HasDoubleListElement(list *List, value interface{}) bool {
 	if list.Head == nil {
-		list.Head = item
-		list.Tail = item
-	} else {
-		list.Tail.Next = item
-		list.Tail = item
+		return false
+	}
+	first := list.Head
+
+	for {
+		if first.Data == value {
+			return true
+		} else {
+			if first.Next != nil {
+				first = first.Next
+			} else {
+				return false
+			}
+		}
 	}
 
-	list.Len++
+	return false
 }
 
-func RemoveDoubleListElement(list *DoubleList, value interface{}) {
+func RemoveDoubleListElement(list *List, value interface{}) *List {
 	if list.Head == nil {
-		return
+		return list
 	}
 
-	current := list.Head
-	prev := list.Head
+	first := list.Head
+	Tail := list.Tail
+
 	for {
-		if current == nil {
-			return
+		if Tail.Next == nil {
+			return list
 		}
 
-		if current.Data == value {
-			prev.Next = current.Next
-			current.Next = nil
+		if first.Data == value {
+			first.Prev.Next = first.Next
+			first.Next.Prev = first.Prev
+
+			first.Prev = nil
+			first.Next = nil
+			first.Data = nil
 
 			list.Len--
-
-			return
+			return list
 		} else {
-			prev = current
-			current = current.Next
+			first = first.Next
 		}
-	}
-}
-
-func HasDoubleListElement(list *DoubleList, value interface{}) bool {
-	for {
-		if list.Head == nil {
-			return false
-		}
-
-		if list.Head.Data == value {
-			return true
-		}
-
-		list.Head = list.Head.Next
 	}
 }
