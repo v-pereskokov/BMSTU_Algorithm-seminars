@@ -39,7 +39,7 @@ func Remove(list *SinglyList, value interface{}) {
 	current := list.Head
 	prev := list.Head
 	for {
-		if list.Tail.Next == nil {
+		if current == nil {
 			return
 		}
 

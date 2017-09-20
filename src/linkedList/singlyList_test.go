@@ -80,9 +80,10 @@ func TestSinglyListRemove(t *testing.T) {
 
 	Remove(list, 5)
 
-	array := []int{3, 5, 6}
+	array := []int{3, 6}
 	for _, value := range array {
 		if value != list.Head.Data {
+			t.Logf("%v\n", list)
 			t.Errorf("Don't match: %d and %d\n", value, list.Head.Data)
 		}
 
