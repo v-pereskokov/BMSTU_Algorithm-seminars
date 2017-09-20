@@ -16,7 +16,6 @@ by Pereskokov Vladislav [seminars].
 ### Algorithms
   + Collections
     * [Singly Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
-    * [Double Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
   + Algorithm
     * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/permutations)
     * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
