@@ -31,6 +31,32 @@ func Insert(list *SinglyList, value interface{}) {
 	list.Len++
 }
 
+func Remove(list *SinglyList, value interface{}) {
+	if list.Head == nil {
+		return
+	}
+
+	current := list.Head
+	prev := list.Head
+	for {
+		if list.Tail.Next == nil {
+			return
+		}
+
+		if current.Data == value {
+			prev.Next = current.Next
+			current.Next = nil
+
+			list.Len--
+
+			return
+		} else {
+			prev = current
+			current = current.Next
+		}
+	}
+}
+
 func Has(list *SinglyList, value interface{}) bool {
 	for {
 		if list.Head == nil {
