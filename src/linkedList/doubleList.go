@@ -1,25 +1,25 @@
 package linkedList
 
-type List struct {
-	Head *Item
-	Tail *Item
+type DoubleList struct {
+	Head *DoubleListItem
+	Tail *DoubleListItem
 	Len  int
 }
 
-type Item struct {
+type DoubleListItem struct {
 	Data interface{}
-	Next *Item
-	Prev *Item
+	Next *DoubleListItem
+	Prev *DoubleListItem
 }
 
-func NewDoubleList() *List {
-	list := &List{}
+func NewDoubleList() *DoubleList {
+	list := &DoubleList{}
 	list.Len = 0
 	return list
 }
 
-func InsertDoubleListElement(list *List, value interface{}) *List {
-	newItem := &Item{value, list.Head, list.Tail}
+func InsertDoubleListElement(list *DoubleList, value interface{}) {
+	newItem := &DoubleListItem{value, list.Head, list.Tail}
 
 	if list.Head == nil {
 		list.Head = newItem
@@ -31,11 +31,9 @@ func InsertDoubleListElement(list *List, value interface{}) *List {
 	}
 
 	list.Len++
-
-	return list
 }
 
-func HasDoubleListElement(list *List, value interface{}) bool {
+func HasDoubleListElement(list *DoubleList, value interface{}) bool {
 	if list.Head == nil {
 		return false
 	}
@@ -56,9 +54,9 @@ func HasDoubleListElement(list *List, value interface{}) bool {
 	return false
 }
 
-func RemoveDoubleListElement(list *List, value interface{}) *List {
+func RemoveDoubleListElement(list *DoubleList, value interface{}) {
 	if list.Head == nil {
-		return list
+		return
 	}
 
 	first := list.Head
@@ -66,7 +64,7 @@ func RemoveDoubleListElement(list *List, value interface{}) *List {
 
 	for {
 		if Tail.Next == nil {
-			return list
+			return
 		}
 
 		if first.Data == value {
@@ -78,7 +76,8 @@ func RemoveDoubleListElement(list *List, value interface{}) *List {
 			first.Data = nil
 
 			list.Len--
-			return list
+
+			return
 		} else {
 			first = first.Next
 		}
