@@ -11,13 +11,13 @@ type SinglyList struct {
 	Tail *SinglyListItem
 }
 
-func New() *SinglyList {
+func NewSingleList() *SinglyList {
 	list := &SinglyList{}
 
 	return list
 }
 
-func Insert(list *SinglyList, value interface{}) {
+func InsertSingleListElement(list *SinglyList, value interface{}) {
 	item := &SinglyListItem{value, nil}
 
 	if list.Head == nil {
@@ -31,7 +31,7 @@ func Insert(list *SinglyList, value interface{}) {
 	list.Len++
 }
 
-func Remove(list *SinglyList, value interface{}) {
+func RemoveSingleListElement(list *SinglyList, value interface{}) {
 	if list.Head == nil {
 		return
 	}
@@ -57,7 +57,7 @@ func Remove(list *SinglyList, value interface{}) {
 	}
 }
 
-func Has(list *SinglyList, value interface{}) bool {
+func HasSingleListElement(list *SinglyList, value interface{}) bool {
 	for {
 		if list.Head == nil {
 			return false
@@ -71,7 +71,7 @@ func Has(list *SinglyList, value interface{}) bool {
 	}
 }
 
-func IsLoopList(list *SinglyList) bool {
+func IsLoopListSingleList(list *SinglyList) bool {
 	slow := list.Head
 	fast := list.Head
 
