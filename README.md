@@ -19,6 +19,7 @@ by Pereskokov Vladislav [seminars].
   + Algorithm
     * [Lexical permutations](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/permutations)
     * [Loop Linked List](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/linkedList)
+    * [BFS and DFS](https://github.com/vladpereskokov/BMSTU_Algorithm-seminars/tree/master/src/graph)
 
 <a name="run"></a>
 ### Run  
