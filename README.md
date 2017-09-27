@@ -9,7 +9,7 @@
 
 <a name="description"></a>
 ### Description  
-Implementation of different algorithms and data structures with `golang` and `c++` 
+Implementation of different algorithms and data structures with `golang` and `python` 
 by Pereskokov Vladislav [seminars].  
 
 <a name="algorithms"></a>
